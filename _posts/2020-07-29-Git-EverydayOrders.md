@@ -93,3 +93,6 @@ Stash:
 - git checkout dev
 - git merge master 
 - git push -u origin dev
+
+![_config.yml](/images/10-commit,tree,blob.png)
+![_config.yml](/images/11-1个commit中都有些什么?.png)

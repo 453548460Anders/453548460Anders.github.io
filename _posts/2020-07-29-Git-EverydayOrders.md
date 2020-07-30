@@ -1,18 +1,4 @@
-# Hello Welcome to my Blog
-
-# Git指令:
-场景一: 开发分支（dev）上的代码达到上线的标准后，要合并到 master 分支
-- git checkout dev
-- git pull
-- git checkout master
-- git merge dev
-- git push -u origin master
-场景二: 当master代码改动了，需要更新开发分支（dev）上的代码
-- git checkout master 
-- git pull 
-- git checkout dev
-- git merge master 
-- git push -u origin dev
+## git instructions:
 
 Git 重命名:
 - mv xxx xxx.md
@@ -39,6 +25,7 @@ Git reset:
 - git reset --hard
 - git reset --hard xxx: 回退到xxx提交时候的代码 (消除最近的几次提交)
 - git reset HEAD: Unstaged取消暂存区的内容, 让暂存区恢复和HEAD一致(当我们提交到暂存区一部分代码时候, 又写了一段代码之后发现目前工作区的代码更好, 想清空暂存区的内容) 
+- git revert: 用于“反做”某一个版本，以达到撤销该版本的修改的目的。比如，我们commit了三个版本（版本一、版本二、 版本三），突然发现版本二不行（如：有bug），想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西
 
 查看历史:
 - git log
@@ -91,4 +78,19 @@ Stash:
 如何比较暂存区和HEAD所含文件的差异: git diff —cached
 如何比较工作区和暂存区所含文件的差异: git 
 如何高效的淘到感兴趣的开源项目: 
-- XX XC XV XB in:readme stars:>1000 : 搜索XX XC XV XB在readme中, 并且stars大于1000
+- XX XC XV XB in:readme stars:>1000 : 搜索XX XC XV XB在readme中, 并且stars大于1000 
+
+
+场景一: 开发分支（dev）上的代码达到上线的标准后，要合并到 master 分支
+- git checkout dev
+- git pull
+- git checkout master
+- git merge dev
+- git push -u origin master
+场景二: 当master代码改动了，需要更新开发分支（dev）上的代码
+- git checkout master 
+- git pull 
+- git checkout dev
+- git merge master 
+- git push -u origin dev
+
